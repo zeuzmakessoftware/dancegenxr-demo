@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'LT Funk';
+    src: url('LT-Funk.otf') format('opentype');
+}
+
+body {
+    font-family: 'LT Funk', sans-serif;
+    background: linear-gradient(135deg, #ff18bd, #ff8ed7, #ffeb3b, #00e5ff);
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5) inset;
+    text-align: center;
+    border: 3px solid #ffcc00;
+    background-image: linear-gradient(to bottom right, #3a0077, #ff0077);
+}
+
+h1 {
+    font-size: 42px;
+    color: #ffeb3b;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 51, 102, 0.8);
+}
+
+textarea {
+    width: 90%;
+    height: 140px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    background-color: #333333;
+    box-shadow: inset 0 0 20px rgba(255, 51, 102, 0.8);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff0077;
+    color: #ffffff;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'LT Funk', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 51, 102, 0.8), 0 0 15px rgba(255, 51, 102, 0.8) inset;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    color: #ff0077;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 20px rgba(255, 255, 0, 1) inset;
+}
+
+#resultContainer {
+    margin-top: 35px;
+    color: #ffeb3b;
+    font-size: 20px;
+}
+
+#resultContainer h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+#resultContainer p {
+    margin: 12px 0;
+    padding: 12px;
+    background-color: #444444;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+#resultContainer p:hover {
+    background-color: #ff0077;
+    box-shadow: 0 0 20px rgba(255, 51, 102, 0.8);
+}
+
+#resultContainer p a {
+    color: #ffeb3b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#resultContainer p a:hover {
+    color: #ffffff;
+}
+
+.spinner {
+    display: none;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #ffcc00;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1.5s linear infinite;
+    margin: 25px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
