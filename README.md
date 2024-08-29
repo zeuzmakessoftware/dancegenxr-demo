@@ -1,2 +1,5 @@
-# npx vite
-please
+# Instructions
+```
+npm install
+npx vite
+```
